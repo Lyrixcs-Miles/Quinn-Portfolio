@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quinn | Portfolio</title>
+  <meta name="description" content="Quinn's portfolio: fashion, beauty, and lifestyle work.">
+  <link rel="icon" href="images/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!--
+    THESIS: the portfolio reads as a magazine contact sheet, varied crop
+    and scale per frame, not a uniform photo-grid gallery.
+    OWN-WORLD: inherited from index.html.
+    STORY: a visitor filters by category and opens a frame to see it at
+    scale, exactly the browsing behaviour a real lookbook rewards.
+    FIRST VIEWPORT: page-header masthead, then filter pills, then the
+    asymmetric contact-sheet grid.
+    FORM: established-world extension, no concept roll.
+  -->
+
+  <header>
+    <nav class="site-nav">
+      <div class="glass-ripples" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="nav-inner container">
+        <a href="index.html" class="logo">Quinn</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-scrim"></div>
+        <div class="nav-collapse">
+          <div class="glass-ripples" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="brands/index.html">Brands</a></li>
+            <li><a href="contact.html">Work With Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page header -->
+    <section class="page-header">
+      <div class="container page-header-grid">
+        <div>
+          <p class="kicker">Portfolio</p>
+          <h1>A working contact sheet.</h1>
+          <p class="page-header-intro">
+            Fashion, beauty, and lifestyle work, filterable below.
+          </p>
+        </div>
+        <figure class="page-header-visual">
+          <div class="page-header-photo-frame">
+            <div class="page-header-photo-back"></div>
+            <div class="page-header-photo">
+              <img data-header-photo src="images/portfolio/beauty/mirror-selfie-02.jpg" alt="Black and white mirror portrait in a hoodie, closer crop, looking down at the phone screen." loading="lazy">
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="portfolio-filters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="fashion">Fashion</button>
+          <button data-filter="beauty">Beauty</button>
+          <button data-filter="lifestyle">Lifestyle</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <button type="button" class="portfolio-item portfolio-item--wide" data-lightbox data-category="fashion" data-label="Fashion" data-image="images/portfolio/fashion/park-halter-trousers-01.jpg" data-caption="Fashion — halter top and camel trousers, city park.">
+            <img src="images/portfolio/fashion/park-halter-trousers-01.jpg" alt="Fashion look: white cutout halter top and camel trousers, shot in a city park." loading="lazy">
+            <span class="work-tag">Fashion</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="fashion" data-label="Fashion" data-image="images/portfolio/fashion/tree-road-profile-bw.jpg" data-caption="Fashion — profile, tree-lined avenue, black and white.">
+            <img src="images/portfolio/fashion/tree-road-profile-bw.jpg" alt="Black and white fashion portrait in profile on a tree-lined avenue, wearing a white halter top and braids." loading="lazy">
+            <span class="work-tag">Fashion</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="fashion" data-label="Fashion" data-image="images/portfolio/fashion/tree-road-front-bw.jpg" data-caption="Fashion — tree-lined avenue, black and white.">
+            <img src="images/portfolio/fashion/tree-road-front-bw.jpg" alt="Black and white fashion portrait facing the camera on a tree-lined avenue." loading="lazy">
+            <span class="work-tag">Fashion</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="fashion" data-label="Fashion" data-image="images/portfolio/fashion/park-halter-trousers-02.jpg" data-caption="Fashion — halter top and camel trousers, city park.">
+            <img src="images/portfolio/fashion/park-halter-trousers-02.jpg" alt="Fashion look: white cutout halter top and camel trousers, full-length in a city park." loading="lazy">
+            <span class="work-tag">Fashion</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="fashion" data-label="Fashion" data-image="images/portfolio/fashion/dirt-lot-bw.jpg" data-caption="Fashion — fitted dress, open lot at dusk, black and white.">
+            <img src="images/portfolio/fashion/dirt-lot-bw.jpg" alt="Black and white fashion portrait in a fitted dress, standing in an open dirt lot at dusk." loading="lazy">
+            <span class="work-tag">Fashion</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item portfolio-item--wide" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/balloon-portrait-01.jpg" data-caption="Beauty — portrait, styled set with balloon backdrop.">
+            <img src="images/portfolio/beauty/balloon-portrait-01.jpg" alt="Beauty portrait with braided hair, seated in front of a pink and white balloon backdrop." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/balloon-portrait-02.jpg" data-caption="Beauty — portrait, styled set with balloon backdrop.">
+            <img src="images/portfolio/beauty/balloon-portrait-02.jpg" alt="Beauty portrait, closer crop, braided hair, balloon backdrop." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/striped-wall-bw.jpg" data-caption="Beauty — close portrait, black and white.">
+            <img src="images/portfolio/beauty/striped-wall-bw.jpg" alt="Black and white close beauty portrait against a corrugated wall, wearing glasses." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/mirror-selfie-01.jpg" data-caption="Beauty — mirror portrait, black and white.">
+            <img src="images/portfolio/beauty/mirror-selfie-01.jpg" alt="Black and white mirror portrait in a hoodie, head tilted, looking down at the phone screen." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item portfolio-item--wide" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/mirror-selfie-02.jpg" data-caption="Beauty — mirror portrait, black and white.">
+            <img src="images/portfolio/beauty/mirror-selfie-02.jpg" alt="Black and white mirror portrait in a hoodie, closer crop, looking down at the phone screen." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="beauty" data-label="Beauty" data-image="images/portfolio/beauty/mirror-selfie-03.jpg" data-caption="Beauty — mirror portrait, black and white.">
+            <img src="images/portfolio/beauty/mirror-selfie-03.jpg" alt="Black and white mirror portrait in a hoodie, hand resting on top of head, looking down at the phone screen." loading="lazy">
+            <span class="work-tag">Beauty</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="lifestyle" data-label="Lifestyle" data-image="images/portfolio/lifestyle/garden-cardigan-01.jpg" data-caption="Lifestyle — garden, golden hour.">
+            <img src="images/portfolio/lifestyle/garden-cardigan-01.jpg" alt="Lifestyle portrait smiling in a white cardigan, garden setting with mountains behind." loading="lazy">
+            <span class="work-tag">Lifestyle</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item portfolio-item--wide" data-lightbox data-category="lifestyle" data-label="Lifestyle" data-image="images/portfolio/lifestyle/garden-cardigan-02.jpg" data-caption="Lifestyle — garden, golden hour.">
+            <img src="images/portfolio/lifestyle/garden-cardigan-02.jpg" alt="Lifestyle portrait in a white cardigan and jeans, garden setting with mountains behind." loading="lazy" style="object-position: 50% 48%;">
+            <span class="work-tag">Lifestyle</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+          <button type="button" class="portfolio-item" data-lightbox data-category="lifestyle" data-label="Lifestyle" data-image="images/portfolio/lifestyle/garden-casual.jpg" data-caption="Lifestyle — garden, candid.">
+            <img src="images/portfolio/lifestyle/garden-casual.jpg" alt="Candid lifestyle portrait laughing over the shoulder, oversized white top and jeans, garden setting." loading="lazy">
+            <span class="work-tag">Lifestyle</span>
+            <span class="portfolio-item-view">View</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="cta-close">
+      <div class="container reveal">
+        <h2>Let's create something with intention.</h2>
+        <p>
+          For bookings, collaborations, and brand partnerships, reach
+          out. I'd love to hear the vision.
+        </p>
+        <a href="contact.html" class="btn-primary-inverse">Work With Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Quinn. All rights reserved.</p>
+  </footer>
+
+  <div class="lightbox-overlay" aria-hidden="true">
+    <div class="lightbox-content"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
