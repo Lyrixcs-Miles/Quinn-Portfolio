@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Quinn Portfolio — Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  /* Revert the desktop-only fixed/overlay-hero header back to its
+     original in-flow sticky behavior — the header pushes hero/page-header
+     content down as normal here, rather than floating over it, and never
+     slides away (.is-hidden is neutralized below). */
+  header {
+    position: sticky;
+    left: auto;
+    width: auto;
+  }
+
+  .site-nav.is-hidden {
+    transform: none;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  :root {
+    --section-pad: 5rem;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .work-intro,
+  .page-header-grid,
+  .bio-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .page-header-visual {
+    order: -1;
+    max-width: 360px;
+  }
+
+  .focus-list {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-item {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-intro {
+    align-items: start;
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 420px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .brand-row {
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  :root {
+    --section-pad: 3.5rem;
+  }
+
+  /* Per feedback: the mobile header's resting (top-of-page) size was too
+     big — matches the already-shrunk .is-compact size instead, so it
+     doesn't visibly grow when you scroll back to the top. */
+  .site-nav {
+    padding: 1.75rem 0;
+  }
+
+  .nav-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Off-canvas glass drawer, not an in-flow accordion — slides in from
+     the right over a dimming .nav-scrim. Positioned/sized here (not in
+     the base rule) since .nav-collapse's desktop default is
+     `display: contents` and never opens at all above 600px. Bold, dark
+     off-black glass (not the header bar's lighter pearl tint) — content
+     still shows faintly through the blur, just moodier. */
+  .nav-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    width: min(78vw, 320px);
+    height: 100vh;
+    padding: 6.5rem 2rem 2rem;
+    background: rgba(27, 23, 28, 0.84);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    box-shadow: -24px 0 60px -20px rgba(8, 6, 9, 0.4);
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 60;
+    overflow: hidden;
+  }
+
+  .nav-collapse.open {
+    transform: translateX(0);
+  }
+
+  .nav-collapse ul {
+    position: relative;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Keep the toggle clickable/visible above the drawer at all times —
+     it's the close control once .nav-collapse is open, in addition to
+     the scrim and Escape. */
+  .nav-toggle {
+    z-index: 65;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(220px, auto);
+  }
+
+  .work-panel--large,
+  .work-panel--a,
+  .work-panel--b {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item--wide {
+    grid-column: span 1;
+    aspect-ratio: 3 / 4;
+  }
+
+  .brand-index-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .brand-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .work-cta,
+  .brand-strip .work-cta {
+    text-align: left;
+  }
+
+  .cta-close {
+    text-align: left;
+  }
+
+  .cta-close p {
+    margin: 0 0 2rem;
+  }
+}
